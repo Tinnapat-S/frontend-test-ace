@@ -29,14 +29,25 @@ const closeModal = () => {
 
 <template>
   <main>
-    <RocketTable
-      :initialData="launchesData"
-      @rocket-click="handleRocketClick"
-    />
-    <Modal
-      :isModalVisible="isModalVisible"
-      :rocket="selectedRocket"
-      @close="closeModal"
-    />
+    <div class="wrapper">
+      <RocketTable
+        :initialData="launchesData"
+        @rocket-click="handleRocketClick"
+      />
+      <Modal
+        :isModalVisible="isModalVisible"
+        :rocket="selectedRocket"
+        @close="closeModal"
+      />
+    </div>
   </main>
 </template>
+
+<style scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+</style>

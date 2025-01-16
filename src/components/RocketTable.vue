@@ -130,6 +130,9 @@ const handleRocketClick = (targetRocket: any) => {
 .my-table {
   width: 100%;
 }
+.text-black {
+  color: "black";
+}
 .p-4 {
   padding: 16px;
 }
